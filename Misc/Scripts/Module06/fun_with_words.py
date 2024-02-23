@@ -6,7 +6,7 @@ import urllib.request
 
 
 
-############### DO NOT MODIFY CODE BETWEEN LINES 8 AND 100 #####################
+############### DO NOT MODIFY CODE BETWEEN LINES 8 AND 114 #####################
 
 
 # Treat this function as a black box. It does not need to be modified. 
@@ -34,6 +34,20 @@ def get_word_list(path=None):
         with open(path, "r") as ff:
             words = [line.rstrip() for line in ff]
     return words
+
+
+
+def test_get_word_list():
+    """
+    Verify that get_word_list works as expected.
+    """
+    print("\nTesting get_word_list...")
+    words = get_word_list()
+
+    if len(words) > 0:
+        print("get_word_list test PASSED.\n")
+    else:
+        print("get_word_list test FAILED.\n")
 
 
 
@@ -307,6 +321,7 @@ def main():
 
 if __name__ == "__main__":
     
+    test_get_word_list()
     test_preprocess()
     test_find_substr()
     test_subset_word_list()
