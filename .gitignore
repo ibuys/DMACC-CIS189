@@ -1,6 +1,9 @@
 *.html
 *.tex
 .vscode
+.vscode/
+./.vscode
 Reference
 Reference/
 ./Reference
+
